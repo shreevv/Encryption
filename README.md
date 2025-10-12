@@ -1,62 +1,71 @@
-Matrix Encryption Demonstrator
+# Matrix Encryption Demonstrator
+
 A web-based visual tool that demonstrates the principles of the Hill Cipher, an encryption algorithm using invertible matrices and modular arithmetic. The application provides a hands-on experience with matrix-based cryptography in a clean, modern interface inspired by the Groww stock trading app.
 
-Overview
+
+
+## Overview
+
 This project is a self-contained Python application that uses the Flask web framework to serve a single-page web app. It allows users to:
-
-See a live demonstration of text being encrypted and decrypted with a randomly generated key matrix.
-
-Encrypt and decrypt their own custom messages.
-
-View a detailed, step-by-step breakdown of the entire encryption process, from text-to-vector conversion to the final ciphertext generation.
+- See a live demonstration of text being encrypted and decrypted with a randomly generated key matrix.
+- Encrypt and decrypt their own custom messages.
+- View a detailed, step-by-step breakdown of the entire encryption process, from text-to-vector conversion to the final ciphertext generation.
 
 The core cryptographic logic is implemented in Python using the NumPy library for efficient matrix operations.
 
-Features
-Interactive Web UI: A simple and intuitive interface built with Tailwind CSS.
+---
 
-Live Demonstration: Generate random examples to see the encryption/decryption cycle in real-time.
+## Features
 
-User-Driven Encryption: Encrypt your own plaintext or decrypt ciphertext using the session's key.
+- **Interactive Web UI**: A simple and intuitive interface built with Tailwind CSS.
+- **Live Demonstration**: Generate random examples to see the encryption/decryption cycle in real-time.
+- **User-Driven Encryption**: Encrypt your own plaintext or decrypt ciphertext using the session's key.
+- **Detailed Visualizations**: A "Show Working" feature provides a clear, step-by-step explanation of the underlying mathematics.
+- **Self-Contained**: The entire application (backend and frontend) is contained within a single Python script.
+- **Automatic Browser Launch**: The script automatically opens the application in a new browser tab upon execution.
 
-Detailed Visualizations: A "Show Working" feature provides a clear, step-by-step explanation of the underlying mathematics.
+---
 
-Self-Contained: The entire application (backend and frontend) is contained within a single Python script.
+## Technology Stack
 
-Automatic Browser Launch: The script automatically opens the application in a new browser tab upon execution.
+- **Backend**: Python, Flask
+- **Numerical Operations**: NumPy
+- **Frontend**: HTML, Tailwind CSS, Vanilla JavaScript
 
-Technology Stack
-Backend: Python, Flask
+---
 
-Numerical Operations: NumPy
+## Requirements
 
-Frontend: HTML, Tailwind CSS, Vanilla JavaScript
+- Python 3.6+
+- The Python packages listed in `requirements.txt`.
 
-Requirements
-Python 3.6+
+---
 
-The Python packages listed in requirements.txt.
+## Installation
 
-Installation
-Clone the repository or download the source code.
+1.  **Clone the repository or download the source code.**
 
-Create and activate a virtual environment (recommended):
+2.  **Create and activate a virtual environment (recommended):**
+    ```bash
+    # For Unix/macOS
+    python3 -m venv venv
+    source venv/bin/activate
 
-# For Unix/macOS
-python3 -m venv venv
-source venv/bin/activate
+    # For Windows
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
 
-# For Windows
-python -m venv venv
-.\venv\Scripts\activate
+3.  **Install the required dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Install the required dependencies:
+---
 
-pip install -r requirements.txt
+## Usage
 
-Usage
 To start the application, simply run the main Python script from your terminal:
 
+```bash
 python matrix_cipher_app.py
-
-The script will start a local Flask server, and the application will automatically open in your default web browser at http://127.0.0.1:5050.
